@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritika Biswas | Software Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Ritika Biswas, a Software Engineer and AI/ML enthusiast specializing in full-stack development and data analytics.">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="light-theme">
+    <div class="cursor-glow"></div>
+    <div class="ocean-bg">
+        <div class="ocean-waves-container">
+            <div class="ocean-wave"></div>
+            <div class="ocean-wave"></div>
+            <div class="ocean-wave"></div>
+        </div>
+    </div>
+
+    <!-- AI Agent Chat -->
+    <div class="ai-agent-container">
+        <div class="ai-trigger" id="ai-trigger">
+            <i data-lucide="bot"></i>
+        </div>
+        <div class="ai-chat-window" id="ai-chat-window">
+            <div class="chat-header">
+                <h4><i data-lucide="sparkles"></i> Ritika's AI Assistant</h4>
+                <div class="close-chat" id="close-chat" style="cursor: pointer;"><i data-lucide="x"></i></div>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-msg">Hi! I'm Ritika's automated assistant. Ask me anything about her skills, projects, or background!</div>
+            </div>
+            <form class="chat-input-area" id="ai-chat-form">
+                <input type="text" id="ai-input" placeholder="Type your question...">
+                <button type="submit"><i data-lucide="send"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Resume Request Modal -->
+    <div id="resume-modal" class="modal">
+        <div class="modal-content reveal">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <i data-lucide="file-text"></i>
+                <h3>Request My Resume</h3>
+            </div>
+            <p>Please provide your email and a short message to receive my latest resume.</p>
+            <form id="resume-request-form" action="https://formsubmit.co/ritikabiswas154@gmail.com" method="POST" target="_blank">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Resume Request - Portfolio">
+                <input type="hidden" name="_template" value="table">
+                <div class="form-group">
+                    <input type="email" name="email" id="requester-email" placeholder="Your Email (Gmail preferred)" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="requester-message" placeholder="Short message (e.g., 'Interested in your profile for a role')" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn">Request Resume</button>
+            </form>
+        </div>
+    </div>
+    
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <div class="logo typing-effect">Ritika<span>.dev</span></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero section">
+            <div class="container">
+                <div class="hero-content reveal">
+                    <h2 class="greeting">Hi, I'm</h2>
+                    <h1 class="name gradient-text">Ritika Biswas</h1>
+                    <h3 class="title">Software Engineer | AI/ML Enthusiast | Management Professional</h3>
+                    <p class="description">
+                        Computer Science and Design undergraduate passionate about building intelligent, scalable, and data-driven applications. Skilled in Python, JavaScript, and AI/ML technologies, combined with strong <strong>management skills</strong> and experience in full-stack development and data analytics.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn primary-btn">View Projects</a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                        <a href="#" class="btn outline-btn" id="download-resume">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>About Me</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>
+                            I am a Computer Science and Design student at <strong>Atria Institute of Technology</strong> (2022-2026) with a current CGPA of <strong>8.8</strong>. My academic journey has been driven by a deep fascination with how design thinking can be integrated with core computing to create exceptional user experiences.
+                        </p>
+                        <p>
+                            I am particularly passionate about <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and <strong>Full-Stack Development</strong>. I possess a unique blend of technical expertise and <strong>management skills</strong>, allowing me to lead projects from conception to deployment while ensuring strategic alignment and efficient collaboration. I enjoy the challenge of building real-world solutions that leverage data to provide actionable insights.
+                        </p>
+                        <div class="interests">
+                            <h4>Interests & Hobbies</h4>
+                            <div class="interest-tags">
+                                <span>Photography</span>
+                                <span>Video Editing</span>
+                                <span>Storytelling</span>
+                                <span>Content Creation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats reveal">
+                        <div class="stat-card">
+                            <span class="stat-number">8.8</span>
+                            <span class="stat-label">Current CGPA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">9+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section bg-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Education</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2022 – 2026</span>
+                            <h3>Bachelor of Engineering in Computer Science and Design</h3>
+                            <h4>Atria Institute of Technology – Bangalore</h4>
+                            <p class="gpa">CGPA: 8.8</p>
+                            <div class="coursework">
+                                <h5>Relevant Coursework:</h5>
+                                <ul>
+                                    <li>Data Structures</li>
+                                    <li>Database Management Systems</li>
+                                    <li>Artificial Intelligence</li>
+                                    <li>Object Oriented Programming</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <span class="date">2020 – 2022</span>
+                            <h3>Pre-University (PCM with Computer Science)</h3>
+                            <h4>Kalyani University Experimental High School – West Bengal</h4>
+                            <p class="gpa">Percentage: 80.2%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Skills</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="skills-dialog-wrapper reveal">
+                    <div class="skills-dialog">
+                        <div class="skills-dialog-header">
+                            <i data-lucide="award"></i>
+                            <h3>Professional Skill Set</h3>
+                        </div>
+                        <div class="skills-dialog-body">
+                            <div class="skills-col">
+                                <h4><i data-lucide="code-2"></i> Programming</h4>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>JavaScript</li>
+                                    <li>C / C++</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                            <div class="skills-col">
+                                <h4><i data-lucide="layout"></i> Web Development</h4>
+                                <ul>
+                                    <li>React.js</li>
+                                    <li>Node.js</li>
+                                    <li>HTML5 & CSS3</li>
+                                </ul>
+                            </div>
+                            <div class="skills-col">
+                                <h4><i data-lucide="brain-circuit"></i> AI / ML</h4>
+                                <ul>
+                                    <li>TensorFlow & PyTorch</li>
+                                    <li>Pandas & NumPy</li>
+                                    <li>Streamlit</li>
+                                </ul>
+                            </div>
+                            <div class="skills-col">
+                                <h4><i data-lucide="database"></i> Databases</h4>
+                                <ul>
+                                    <li>MongoDB</li>
+                                    <li>MySQL</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                            </div>
+                            <div class="skills-col">
+                                <h4><i data-lucide="wrench"></i> Tools</h4>
+                                <ul>
+                                    <li>Git & GitHub</li>
+                                    <li>VS Code</li>
+                                    <li>Power BI & Excel</li>
+                                    <li>Figma & Canva</li>
+                                </ul>
+                            </div>
+                            <div class="skills-col">
+                                <h4><i data-lucide="users"></i> Soft Skills</h4>
+                                <ul>
+                                    <li>Leadership</li>
+                                    <li>Strategic Thinking</li>
+                                    <li>Project Management</li>
+                                    <li>Communication</li>
+                                    <li>Team Collaboration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section bg-alt">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Projects</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <div class="project-img">
+                            <img src="img/project1.png" alt="Hearing Edge Application">
+                        </div>
+                        <div class="project-content">
+                            <h3>Hearing Edge Application</h3>
+                            <p>A real-time mobile application that captures and enhances surrounding audio with extremely low latency (~3ms). The system processes live audio and improves clarity through amplification and parametric EQ filtering.</p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Python</span>
+                                <span>Flutter</span>
+                            </div>
+                            <div class="project-features">
+                                <span><i data-lucide="check-circle-2"></i> Real-time audio capture</span>
+                                <span><i data-lucide="check-circle-2"></i> Low latency processing</span>
+                                <span><i data-lucide="check-circle-2"></i> Audio enhancement filters</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card reveal">
+                        <div class="project-img">
+                            <img src="img/project2.png" alt="Health Data Analysis System">
+                        </div>
+                        <div class="project-content">
+                            <h3>Health Data Analysis System</h3>
+                            <p>A data analytics project focused on analyzing health datasets and generating insights using visualization and statistical analysis.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Experience</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="experience-list">
+                    <div class="exp-item reveal">
+                        <div class="exp-header">
+                            <h3>Student Brand Ambassador</h3>
+                            <span class="exp-date">Nov 2024 – April 2025</span>
+                        </div>
+                        <h4>The Esports Club | Bengaluru</h4>
+                        <ul>
+                            <li>Promoted the brand within campus communities and organized gaming tournaments.</li>
+                            <li>Collaborated with student groups to increase brand awareness.</li>
+                        </ul>
+                    </div>
+                    <div class="exp-item reveal">
+                        <div class="exp-header">
+                            <h3>Social Media Lead</h3>
+                            <span class="exp-date">June 2025 – Sept 2025</span>
+                        </div>
+                        <h4>Atria Foundation | Remote</h4>
+                        <ul>
+                            <li>Managed digital content creation and supported event marketing.</li>
+                            <li>Handled community engagement across various platforms.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications & Achievements Section -->
+        <section id="certifications" class="section bg-alt">
+            <div class="container">
+                <div class="certification-grid">
+                    <div class="cert-col reveal">
+                        <div class="section-title">
+                            <h2>Certifications</h2>
+                            <div class="underline"></div>
+                        </div>
+                        <ul class="cert-list">
+                            <li><i data-lucide="award"></i> AI for Product Management – Pendo</li>
+                            <li><i data-lucide="award"></i> Generative AI – Microsoft</li>
+                            <li><i data-lucide="award"></i> AI/ML Certification – Infosys</li>
+                            <li><i data-lucide="award"></i> GenAI Powered Data Analytics – Tata</li>
+                            <li><i data-lucide="award"></i> Deep Learning – Coursera</li>
+                            <li><i data-lucide="award"></i> Project Management – Coursera</li>
+                            <li><i data-lucide="award"></i> Prompt Engineering – Infosys</li>
+                            <li><i data-lucide="award"></i> Deloitte Data Analytics Job Simulation</li>
+                            <li><i data-lucide="award"></i> Java Full-Stack Development – TNS India Foundation</li>
+                        </ul>
+                    </div>
+                    <div class="achieve-col reveal" id="achievements">
+                        <div class="section-title">
+                            <h2>Achievements</h2>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="achievement-card">
+                            <i data-lucide="file-text"></i>
+                            <p>Published research paper in IEEE conference proceedings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Contact Me</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info reveal">
+                        <h3>Let's build something amazing together</h3>
+                        <p>Feel free to reach out for collaborations or just a friendly chat about tech!</p>
+                        
+                        <div class="contact-links">
+                            <a href="mailto:ritikabiswas154@gmail.com" class="contact-link-item">
+                                <i data-lucide="mail"></i>
+                                <span>ritikabiswas154@gmail.com</span>
+                            </a>
+                            <a href="https://linkedin.com/in/ritika-biswas-6982a8237" target="_blank" class="contact-link-item">
+                                <i data-lucide="linkedin"></i>
+                                <span>linkedin.com/in/ritika-biswas</span>
+                            </a>
+                            <a href="https://github.com/ritika2003biswas" target="_blank" class="contact-link-item">
+                                <i data-lucide="github"></i>
+                                <span>github.com/ritika2003biswas</span>
+                            </a>
+                            <div class="contact-link-item">
+                                <i data-lucide="map-pin"></i>
+                                <span>Bengaluru, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/ritikabiswas154@gmail.com" method="POST" target="_blank">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Message from Portfolio Website">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn pulse">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ritika Biswas. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i data-lucide="github"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
